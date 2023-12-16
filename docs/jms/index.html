@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cultural revolution</title>
+</head>
+<body>
+    <style>
+        html {
+            background-color: #FFFFFF;
+        }
+
+        body {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #image-wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image-wrapper-vertical {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #image {
+            max-height: 100%;
+            max-width: 100%;
+            filter: invert(1);
+        }
+
+        @media (min-aspect-ratio: 1) {
+            #image {
+                min-height: 100%;
+            }
+        }
+
+        @media (max-aspect-ratio: 1) {
+            #image {
+                min-width: 100%;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #image {
+                filter: invert(0);
+            }
+
+            html {
+                background-color: #000000;
+            }
+        }
+    </style>
+    <body>
+        <div id="image-wrapper">
+            <img id="image" src="jms-cultural-revolution.png">
+        </div>
+    </body>
+</body>
+</html>
